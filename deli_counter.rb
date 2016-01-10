@@ -4,13 +4,12 @@ def line(katz_deli)
     message += ' empty.'
   else
     message += ': '
-    katz_deli.each_with_index.collect do |customer,index |
+    katz_deli.each_with_index do |customer,index |
       message += "#{index+1}. #{customer} "
     end
   end
   puts message.strip
 end
-
 
 def take_a_number(katz_deli, new_customer)
  katz_deli << new_customer
